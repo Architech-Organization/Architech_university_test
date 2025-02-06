@@ -1,6 +1,11 @@
 name: CI Pipeline
 
-on: [push, pull_request]
+on: 
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to run the workflow on'
+        required: true
 
 jobs:
   build:
